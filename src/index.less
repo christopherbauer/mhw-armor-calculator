@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+.armor {
+  display: block;
+  .icon {
+    p {
+      display: inline-block;
+      height: 40px;
+      vertical-align: middle;
+    }
+    i {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      margin: 0 10px 0 10px;
+      background-image: url("./images/MH3-Icons.png");
+      background-position-y: 115px;
+      &.helmet {
+        background-position-x: 0;
+      }
+      &.chest {
+        background-position-x: -37px;
+      }
+      &.arms {
+        background-position-x: -77px;
+      }
+      &.waist {
+        background-position-x: -111px;
+      }
+      &.legs {
+        background-position-x: -152px;
+      }
+    }
+    .rarity
+    {
+      &-8 {
+        background-color: orange;
+      }
+      &-7 {
+        background-color: purple;
+      }
+    }
+  }  
+}

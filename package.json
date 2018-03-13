@@ -1,0 +1,25 @@
+{
+  "name": "mhw-armor-calculator",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "less-compiler": "^0.2.4",
+    "npm-run-all": "^4.1.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.1.1"
+  },
+  "scripts": {
+    "build-css": "lessc src/index.less src/index.css",
+    "watch-css": "less-watch-compiler src src",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p build-css watch-css start-js",
+    "build-js": "react-scripts build",
+    "build": "npm-run-all -p build-js prepare.js",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "font-awesome": "^4.7.0"
+  }
+}
