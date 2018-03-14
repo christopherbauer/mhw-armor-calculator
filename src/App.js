@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import sprite from './images/MH3-Icons.png';
 import './App.css';
 
 class App extends Component {
@@ -9,15 +8,16 @@ class App extends Component {
     for (var i = 0; i < max; i++) {
       squares.push({ "value": (i < value) });
     }
-    return squares.map((square, index) => (<p className={square.value}></p>));
+    return squares.map((square, index) => <p data-value={square.value} className="box"></p>);
   }
   renderSkills(skills) {
+      const skillInfo = [{ "name": "Speed Sharpening", "max": 3},{ "name": "Weakness Exploit", "max": 3}];
       return (
         skills.map(function(item, index) {
         return (
-          <div>
+          <div className="skills">
             <h3>{item.name}</h3>
-            {this.renderBox(item.value, 3)}
+            {this.renderBox(item.value, 5)}
           </div>
         );
       }, this)
@@ -45,6 +45,9 @@ class App extends Component {
           <h2>Popular Armor Pieces</h2>
           {this.renderArmor("helmet",8,"Dragon King Eyepatch", [{ "name":"Weakness Exploit", "value": 2 }])}
           {this.renderArmor("chest",7,"Odogaron Mail A", [ { "name": "Speed Sharpening", "value": 2 }, { "name": "Bleeding Resistance", "value": 1 } ])}
+          {this.renderArmor("arms",7,"Uragaan Vambraces B", [ { "name": "Guard", "value": 1 } ])}
+          {this.renderArmor("waist",8,"Xeno'jiiva Spine A", [ { "name": "Blight Resistance", "value": 2 }, { "name": "Special Ammo Boost", "value": 1 } ])}
+          {this.renderArmor("legs",5,"Gastodon Alpha Armor A", [ { "name": "Flinch Free", "value": 1 }, { "name": "Blast Resistance", "value": 1 } ])}
         </p>
       </div>
     );

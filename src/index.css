@@ -7,40 +7,62 @@ p {
   margin: 0;
   padding: 0;
 }
-.armor {
+div.armor {
   display: block;
 }
-.armor .icon p {
+div.armor div.skills p.box {
+  margin: 0 5px 0 5px;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  border-radius: 4px;
+}
+div.armor div.skills p.box[data-value="true"] {
+  border: solid 1px #634906;
+  background-color: yellow;
+}
+div.armor div.skills p.box[data-value="false"] {
+  border: solid 1px #634906;
+  background-color: lightgray;
+}
+div.armor div.icon p {
   display: inline-block;
   height: 40px;
   vertical-align: middle;
 }
-.armor .icon i {
+div.armor div.icon i {
   display: inline-block;
   width: 40px;
   height: 40px;
   margin: 0 10px 0 10px;
   background-image: url("images/MH3-Icons.png");
   background-position-y: 115px;
+  border: double 3px black;
 }
-.armor .icon i.helmet {
+div.armor div.icon i.helmet {
   background-position-x: 0;
 }
-.armor .icon i.chest {
+div.armor div.icon i.chest {
   background-position-x: -37px;
 }
-.armor .icon i.arms {
-  background-position-x: -77px;
+div.armor div.icon i.arms {
+  background-position-x: -74px;
 }
-.armor .icon i.waist {
-  background-position-x: -111px;
+div.armor div.icon i.waist {
+  background-position-x: -112px;
 }
-.armor .icon i.legs {
+div.armor div.icon i.legs {
   background-position-x: -152px;
 }
-.armor .icon .rarity-8 {
+div.armor div.icon .rarity-8 {
   background-color: orange;
 }
-.armor .icon .rarity-7 {
+div.armor div.icon .rarity-7 {
   background-color: purple;
+}
+div.armor div.icon .rarity-6 {
+  background-color: red;
+}
+div.armor div.icon .rarity-5 {
+  background-color: green;
 }

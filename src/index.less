@@ -7,9 +7,27 @@ p {
   margin: 0;
   padding: 0;
 }
-.armor {
+div.armor {
   display: block;
-  .icon {
+  div.skills {
+    p.box {
+      margin: 0 5px 0 5px;
+      width: 15px;
+      height: 15px;
+      display: inline-block;
+
+      border-radius: 4px;
+      &[data-value="true"]{
+        border: solid 1px #634906;
+        background-color: yellow;
+      }
+      &[data-value="false"]{
+        border: solid 1px #634906;
+        background-color: lightgray;
+      }
+    }
+  }
+  div.icon {
     p {
       display: inline-block;
       height: 40px;
@@ -22,6 +40,7 @@ p {
       margin: 0 10px 0 10px;
       background-image: url("./images/MH3-Icons.png");
       background-position-y: 115px;
+      border: double 3px black;
       &.helmet {
         background-position-x: 0;
       }
@@ -29,10 +48,10 @@ p {
         background-position-x: -37px;
       }
       &.arms {
-        background-position-x: -77px;
+        background-position-x: -74px;
       }
       &.waist {
-        background-position-x: -111px;
+        background-position-x: -112px;
       }
       &.legs {
         background-position-x: -152px;
@@ -45,6 +64,24 @@ p {
       }
       &-7 {
         background-color: purple;
+      }
+      &-6 {
+        background-color: red;
+      }
+      &-5 {
+        background-color: green;
+      }
+      &-4 {
+        
+      }
+      &-3 {
+        
+      }
+      &-2 {
+        
+      }
+      &-1 {
+        
       }
     }
   }  
