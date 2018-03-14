@@ -3,66 +3,70 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
-p {
+body div.App div.App-main {
+  margin: 0 auto;
+  width: 90%;
+}
+body div.App div.App-main p {
   margin: 0;
   padding: 0;
 }
-div.armor {
-  display: block;
-}
-div.armor div.skills p.box {
+body div.App div.App-main div.armor div.skills p.box {
   margin: 0 5px 0 5px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
   width: 15px;
   height: 15px;
   display: inline-block;
   border-radius: 4px;
 }
-div.armor div.skills p.box[data-value="true"] {
+body div.App div.App-main div.armor div.skills p.box[data-value="true"] {
   border: solid 1px #634906;
-  background-color: yellow;
+  background-color: #fdfd20;
 }
-div.armor div.skills p.box[data-value="false"] {
+body div.App div.App-main div.armor div.skills p.box[data-value="false"] {
   border: solid 1px #634906;
   background-color: lightgray;
 }
-div.armor div.icon p {
+body div.App div.App-main div.armor div.icon p {
   display: inline-block;
   height: 40px;
   vertical-align: middle;
 }
-div.armor div.icon i {
+body div.App div.App-main div.armor div.icon i {
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  min-width: 46px;
+  min-height: 46px;
   margin: 0 10px 0 10px;
-  background-image: url("images/MH3-Icons.png");
+  background-image: url("assets/MH3-Icons.png");
   background-position-y: 115px;
   border: double 3px black;
 }
-div.armor div.icon i.helmet {
+body div.App div.App-main div.armor div.icon i.helmet {
   background-position-x: 0;
 }
-div.armor div.icon i.chest {
+body div.App div.App-main div.armor div.icon i.chest {
   background-position-x: -37px;
 }
-div.armor div.icon i.arms {
+body div.App div.App-main div.armor div.icon i.arms {
   background-position-x: -74px;
 }
-div.armor div.icon i.waist {
+body div.App div.App-main div.armor div.icon i.waist {
   background-position-x: -112px;
 }
-div.armor div.icon i.legs {
+body div.App div.App-main div.armor div.icon i.legs {
   background-position-x: -152px;
 }
-div.armor div.icon .rarity-8 {
+body div.App div.App-main div.armor div.icon .rarity-8 {
   background-color: orange;
 }
-div.armor div.icon .rarity-7 {
+body div.App div.App-main div.armor div.icon .rarity-7 {
   background-color: purple;
 }
-div.armor div.icon .rarity-6 {
+body div.App div.App-main div.armor div.icon .rarity-6 {
   background-color: red;
 }
-div.armor div.icon .rarity-5 {
+body div.App div.App-main div.armor div.icon .rarity-5 {
   background-color: green;
 }
