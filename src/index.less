@@ -10,86 +10,93 @@ body {
         margin: 0;
         padding: 0;
       }
-      div.armor {
-        div.skills {
-          p.box {
-            margin: 0 5px 0 5px;
-            position: relative;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 15px;
-            height: 15px;
-            display: inline-block;
-      
-            border-radius: 4px;
-            &[data-value="true"]{
-              border: solid 1px #634906;
-              background-color: rgb(253, 253, 32);
-            }
-            &[data-value="false"]{
-              border: solid 1px #634906;
-              background-color: lightgray;
+      div.armor-list {
+        padding: 5px;
+        background-color: rgba(0, 0, 0, .6);
+        color: lightgray;
+        div.armor {
+          border-bottom: 2px dashed rgb(0, 50, 0);
+          padding: 3px;
+          div.skills {
+            p.box {
+              margin: 0 5px 0 5px;
+              position: relative;
+              top: 50%;
+              transform: translateY(-50%);
+              width: 15px;
+              height: 15px;
+              display: inline-block;
+        
+              border-radius: 4px;
+              &[data-value="true"]{
+                border: solid 1px #634906;
+                background-color: rgb(253, 253, 32);
+              }
+              &[data-value="false"]{
+                border: solid 1px #634906;
+                background-color: lightgray;
+              }
             }
           }
+          div.icon {
+            p {
+              display: inline-block;
+              height: 40px;
+              vertical-align: middle;
+            }
+            i {
+              display: inline-block;
+              min-width: 46px;
+              min-height: 46px;
+              margin: 0 10px 0 10px;
+              background-image: url("./assets/MH3-Icons.png");
+              background-position-y: 115px;
+              border: double 3px black;
+              &.helmet {
+                background-position-x: 0;
+              }
+              &.chest {
+                background-position-x: -37px;
+              }
+              &.arms {
+                background-position-x: -74px;
+              }
+              &.waist {
+                background-position-x: -112px;
+              }
+              &.legs {
+                background-position-x: -152px;
+              }
+            }
+            .rarity
+            {
+              &-8 {
+                background-color: orange;
+              }
+              &-7 {
+                background-color: purple;
+              }
+              &-6 {
+                background-color: red;
+              }
+              &-5 {
+                background-color: green;
+              }
+              &-4 {
+                
+              }
+              &-3 {
+                
+              }
+              &-2 {
+                
+              }
+              &-1 {
+                
+              }
+            }
+          }  
         }
-        div.icon {
-          p {
-            display: inline-block;
-            height: 40px;
-            vertical-align: middle;
-          }
-          i {
-            display: inline-block;
-            min-width: 46px;
-            min-height: 46px;
-            margin: 0 10px 0 10px;
-            background-image: url("./assets/MH3-Icons.png");
-            background-position-y: 115px;
-            border: double 3px black;
-            &.helmet {
-              background-position-x: 0;
-            }
-            &.chest {
-              background-position-x: -37px;
-            }
-            &.arms {
-              background-position-x: -74px;
-            }
-            &.waist {
-              background-position-x: -112px;
-            }
-            &.legs {
-              background-position-x: -152px;
-            }
-          }
-          .rarity
-          {
-            &-8 {
-              background-color: orange;
-            }
-            &-7 {
-              background-color: purple;
-            }
-            &-6 {
-              background-color: red;
-            }
-            &-5 {
-              background-color: green;
-            }
-            &-4 {
-              
-            }
-            &-3 {
-              
-            }
-            &-2 {
-              
-            }
-            &-1 {
-              
-            }
-          }
-        }  
       }
     }
   }

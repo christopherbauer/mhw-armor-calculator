@@ -11,7 +11,16 @@ body div.App div.App-main p {
   margin: 0;
   padding: 0;
 }
-body div.App div.App-main div.armor div.skills p.box {
+body div.App div.App-main div.armor-list {
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: lightgray;
+}
+body div.App div.App-main div.armor-list div.armor {
+  border-bottom: 2px dashed #003200;
+  padding: 3px;
+}
+body div.App div.App-main div.armor-list div.armor div.skills p.box {
   margin: 0 5px 0 5px;
   position: relative;
   top: 50%;
@@ -21,20 +30,20 @@ body div.App div.App-main div.armor div.skills p.box {
   display: inline-block;
   border-radius: 4px;
 }
-body div.App div.App-main div.armor div.skills p.box[data-value="true"] {
+body div.App div.App-main div.armor-list div.armor div.skills p.box[data-value="true"] {
   border: solid 1px #634906;
   background-color: #fdfd20;
 }
-body div.App div.App-main div.armor div.skills p.box[data-value="false"] {
+body div.App div.App-main div.armor-list div.armor div.skills p.box[data-value="false"] {
   border: solid 1px #634906;
   background-color: lightgray;
 }
-body div.App div.App-main div.armor div.icon p {
+body div.App div.App-main div.armor-list div.armor div.icon p {
   display: inline-block;
   height: 40px;
   vertical-align: middle;
 }
-body div.App div.App-main div.armor div.icon i {
+body div.App div.App-main div.armor-list div.armor div.icon i {
   display: inline-block;
   min-width: 46px;
   min-height: 46px;
@@ -43,30 +52,30 @@ body div.App div.App-main div.armor div.icon i {
   background-position-y: 115px;
   border: double 3px black;
 }
-body div.App div.App-main div.armor div.icon i.helmet {
+body div.App div.App-main div.armor-list div.armor div.icon i.helmet {
   background-position-x: 0;
 }
-body div.App div.App-main div.armor div.icon i.chest {
+body div.App div.App-main div.armor-list div.armor div.icon i.chest {
   background-position-x: -37px;
 }
-body div.App div.App-main div.armor div.icon i.arms {
+body div.App div.App-main div.armor-list div.armor div.icon i.arms {
   background-position-x: -74px;
 }
-body div.App div.App-main div.armor div.icon i.waist {
+body div.App div.App-main div.armor-list div.armor div.icon i.waist {
   background-position-x: -112px;
 }
-body div.App div.App-main div.armor div.icon i.legs {
+body div.App div.App-main div.armor-list div.armor div.icon i.legs {
   background-position-x: -152px;
 }
-body div.App div.App-main div.armor div.icon .rarity-8 {
+body div.App div.App-main div.armor-list div.armor div.icon .rarity-8 {
   background-color: orange;
 }
-body div.App div.App-main div.armor div.icon .rarity-7 {
+body div.App div.App-main div.armor-list div.armor div.icon .rarity-7 {
   background-color: purple;
 }
-body div.App div.App-main div.armor div.icon .rarity-6 {
+body div.App div.App-main div.armor-list div.armor div.icon .rarity-6 {
   background-color: red;
 }
-body div.App div.App-main div.armor div.icon .rarity-5 {
+body div.App div.App-main div.armor-list div.armor div.icon .rarity-5 {
   background-color: green;
 }
