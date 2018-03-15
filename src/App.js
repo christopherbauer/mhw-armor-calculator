@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { isUndefined } from 'util';
 
 class App extends Component {
   renderBox(value, max) {
@@ -14,12 +13,14 @@ class App extends Component {
   renderSkills(skills) {
     var skillInfo = [];
     skillInfo["Blast Resistance"] = { "max": 3 };
+    skillInfo["Bleeding Resistance"] = { "max": 3 };
     skillInfo["Blight Resistance"] = { "max": 3 };
     skillInfo["Flinch Free"] = { "max": 3 };
     skillInfo["Guard"] = { "max": 5 };
     skillInfo["Speed Sharpening"] = { "max": 3 };
     skillInfo["Special Ammo Boost"] = { "max": 1 };
     skillInfo["Weakness Exploit"] = { "max": 3 };
+
       return (
         skills.map(function(item, index) {
         return (
@@ -39,7 +40,7 @@ class App extends Component {
     return (
     <div class="armor container">
       <div class="icon row">
-        <div className="col-sm-1">
+        <div className="col-sm-1 center armor-check">
           <input type="checkbox" />
         </div>
         <div className="col-sm-1">
@@ -58,7 +59,6 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
         </header>
         <div className="App-main container">
           <div className="row">
