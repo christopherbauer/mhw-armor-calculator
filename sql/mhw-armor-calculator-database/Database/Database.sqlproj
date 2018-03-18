@@ -63,7 +63,14 @@
   <ItemGroup>
     <Build Include="dbo\Tables\Skill.sql" />
     <Build Include="dbo\Tables\Game.sql" />
-    <Build Include="dbo\Tables\ArmorSkill.sql" />
     <Build Include="dbo\Tables\Armor.sql" />
+    <Build Include="dbo\Tables\Slot.sql" />
+    <Build Include="dbo\Tables\Rarity.sql" />
+    <Build Include="dbo\Tables\ArmorType.sql" />
+    <Build Include="dbo\Tables\Armor_Slot.sql" />
+    <Build Include="dbo\Tables\Armor_Skill.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Monster-Hunter Compare.scmp" />
   </ItemGroup>
 </Project>

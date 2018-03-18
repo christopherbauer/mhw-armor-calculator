@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[ArmorSkill] (
+﻿CREATE TABLE [dbo].[Armor_Skill] (
     [ArmorId] INT NOT NULL,
     [SkillId] INT NOT NULL,
     [Points]  INT NOT NULL,
