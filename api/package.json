@@ -1,0 +1,34 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "API for Monster Hunter World Armor Calculator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"No tests\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christopherbauer/mhw-armor-calculator.git"
+  },
+  "keywords": [
+    "RESTful",
+    "api",
+    "monster-hunter-world",
+    "mhw"
+  ],
+  "author": "Christopher Bauer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/christopherbauer/mhw-armor-calculator/issues"
+  },
+  "homepage": "https://github.com/christopherbauer/mhw-armor-calculator#readme",
+  "devDependencies": {
+    "nodemon": "^1.17.2"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "sequelize": "^4.37.1",
+    "tedious": "^2.3.1"
+  }
+}
