@@ -13,6 +13,7 @@ My first react app built out as an armor calculator for MHW. The purpose of this
     - [ ] Suggest alternate armors if you have jewels that allow you be 'more permissive' of exchanging decorations
       * EX your primary armor set skill is Handicraft and one piece of armor has 1 handicraft but zero slots, but another has Critcial Eye and 2 slots, the calculator should suggest that you use the armor set that gets you a bonus slot as long as you have the decoration for it)
   - [ ] Create a form for user submitted armor sets
+  - [ ] Create encoded share links for the application
 - [ ] Database Tier
   - [x] Define core armor tables and relationships
   - [x] Define process for source controlled DBMS (sql server database project in VS professional)
@@ -23,6 +24,7 @@ My first react app built out as an armor calculator for MHW. The purpose of this
   - [ ] Setup armors and GET
   - [ ] Setup decorations and GET
   - [ ] Setup augmentations and GET
+  - [ ] Setup share link and GET (use API version in case this changes from outside world persepctive)
 
 ## Technologies Used
 
