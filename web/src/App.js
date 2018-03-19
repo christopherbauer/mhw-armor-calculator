@@ -1,14 +1,23 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-
-class App extends Component {
+const API_HOST = 'http://localhost:3001'; //temporary
+class ArmorList extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      armors: props.armors
+    }
+  }
+  componentWillReceiveProps(nextProps) {
+    this.setState({ armors: nextProps.armors });
+  }
   renderBox(value, max) {
     var squares = [];
     for (var i = 0; i < max; i++) {
       squares.push({ "value": (i < value) });
     }
-    return squares.map((square, index) => <p data-value={square.value} className="box"></p>);
+    return squares.map((square, index) => <p key={index} data-value={square.value} className="box"></p>);
   }
   renderSkills(skills) {
     var skillInfo = [];
@@ -24,7 +33,7 @@ class App extends Component {
       return (
         skills.map(function(item, index) {
         return (
-          <div className="skills row">
+          <div key="{item.name}" className="skills row">
             <div className="col-sm-2">
               <p>{item.name}</p>
             </div>
@@ -36,10 +45,10 @@ class App extends Component {
       }, this)
   );
   }
-  renderArmor(type, rarity, name, skills) {
+  renderArmor(key, type, rarity, name, description, skills) {
     return (
-    <div class="armor container">
-      <div class="icon row">
+    <div key={key} className="armor container">
+      <div className="icon row">
         <div className="col-sm-1 center armor-check">
           <input type="checkbox" />
         </div>
@@ -50,11 +59,38 @@ class App extends Component {
           <h3>{name}</h3>
         </div>
       </div>
-      {this.renderSkills(skills)}
+      {this.renderSkills([{ "name":"Weakness Exploit", "value": 2 }])}
     </div>
     );
   }
   render() {
+    const listItems = this.state.armors.map((armor) => {
+      return this.renderArmor(armor.armorId, armor.armorTypeId, armor.rarityId, armor.name, armor.description)
+    });
+    return (
+      <div className="armor-list">
+        {listItems}
+      </div>      
+    );
+  }
+}
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      armors: Array(0).fill(null)
+    };
+  }
+  componentDidMount() {
+    fetch(API_HOST+"/armors")
+    .then(response => response.json())
+    .then(json => {
+      this.setState({ armors: json });
+    });
+  };
+  
+  render() {
+    const armorList = this.state.armors;
     return (
       <div className="App">
         <header className="App-header">
@@ -64,13 +100,7 @@ class App extends Component {
           <div className="row">
             <h2>Popular Armor Pieces</h2>
           </div>
-          <div className="armor-list">
-            {this.renderArmor("helmet",8,"Dragon King Eyepatch", [{ "name":"Weakness Exploit", "value": 2 }])}
-            {this.renderArmor("chest",7,"Odogaron Mail A", [ { "name": "Speed Sharpening", "value": 2 }, { "name": "Bleeding Resistance", "value": 1 } ])}
-            {this.renderArmor("arms",7,"Uragaan Vambraces B", [ { "name": "Guard", "value": 1 } ])}
-            {this.renderArmor("waist",8,"Xeno'jiiva Spine A", [ { "name": "Blight Resistance", "value": 2 }, { "name": "Special Ammo Boost", "value": 1 } ])}
-            {this.renderArmor("legs",5,"Gastodon Alpha Armor A", [ { "name": "Flinch Free", "value": 1 }, { "name": "Blast Resistance", "value": 1 } ])}
-          </div>
+          <ArmorList armors={armorList} />
         </div>
       </div>
     );
