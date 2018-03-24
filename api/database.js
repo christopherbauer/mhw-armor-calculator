@@ -1,11 +1,13 @@
 'use strict'
 
+const config = require('./config');
+
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize('Monster-Hunter','MonsterHunterArmorCalculatorReader','mhw@rm0rc@lc', {
-    host: 'DEVIMAGE-LAPTOP',
+const sequelize = new Sequelize(config.databaseName,config.login,config.password, {
+    host: config.host,
     dialect: 'mssql',
     dialectOptions: {
-        port: 1433
+        port: 60641
     },
     operatorAliases: false,
     pool: {
