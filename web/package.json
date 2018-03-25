@@ -8,6 +8,8 @@
     "dotenv": "^5.0.1",
     "jquery": "^3.3.1",
     "less-compiler": "^0.2.4",
+    "less-watch-compiler": "^1.11.0",
+    "less-watcher": "^1.2.0",
     "npm-run-all": "^4.1.2",
     "popper": "^1.0.1",
     "popper.js": "^1.14.1",

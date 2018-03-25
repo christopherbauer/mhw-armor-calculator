@@ -6,7 +6,7 @@ begin transaction armortypes
 	insert into @armortype
 	values 
 		(1, 'Head'), 
-		(2, 'Torso'),
+		(2, 'Chest'),
 		(3, 'Arms'),
 		(4, 'Waist'),
 		(5, 'Legs')

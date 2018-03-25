@@ -7,10 +7,14 @@ class ArmorList extends Component {
     super(props);
     this.state = {
       armors: props.armors
+      , armorTypes: props.armorTypes
     }
   }
   componentWillReceiveProps(nextProps) {
-    this.setState({ armors: nextProps.armors });
+    this.setState({ 
+      armors: nextProps.armors
+      , armorTypes: nextProps.armorTypes 
+    });
   }
   renderBox(value, max) {
     var squares = [];
@@ -45,6 +49,19 @@ class ArmorList extends Component {
       }, this)
   );
   }
+  renderArmorType(type, rarity) {
+    const armorTypes = this.state.armorTypes;
+    console.log(armorTypes);
+    console.log(type);
+    if(armorTypes.length > 0){
+      return (
+        <i className={armorTypes.find(function(element) { return element.armorTypeId === type }).name.toLowerCase() + " rarity-" + rarity}></i>
+      );
+    }
+    else {
+      return (<i className={" rarity-" + rarity}></i>);
+    }
+  }
   renderArmor(key, type, rarity, name, description, skills) {
     return (
     <div key={key} className="armor container">
@@ -53,7 +70,7 @@ class ArmorList extends Component {
           <input type="checkbox" />
         </div>
         <div className="col-sm-1">
-          <i className={type + " rarity-" + rarity}></i>
+          {this.renderArmorType(type, rarity)}
         </div>
         <div className="col-sm-10">
           <h3>{name}</h3>
@@ -79,6 +96,7 @@ class App extends Component {
     super(props);
     this.state = {
       armors: Array(0).fill(null)
+      , armorTypes: Array(0).fill(null)
     };
   }
   componentDidMount() {
@@ -87,10 +105,16 @@ class App extends Component {
     .then(json => {
       this.setState({ armors: json });
     });
+    fetch(API_HOST+"/armorTypes")
+    .then(response => response.json())
+    .then(json => {
+      this.setState({ armorTypes: json });
+    });
   };
   
   render() {
     const armorList = this.state.armors;
+    const armorTypesList = this.state.armorTypes;
     return (
       <div className="App">
         <header className="App-header">
@@ -100,7 +124,7 @@ class App extends Component {
           <div className="row">
             <h2>Popular Armor Pieces</h2>
           </div>
-          <ArmorList armors={armorList} />
+          <ArmorList armors={armorList} armorTypes={armorTypesList} />
         </div>
       </div>
     );

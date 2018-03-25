@@ -3,6 +3,7 @@ var express = require("express"),
     port = process.env.PORT || 3001,
     sequelize = require('sequelize'),
     ArmorModel = require("./models/armorModel"),
+    ArmorTypeModel = require("./models/armorTypeModel"),
     bodyParser = require("body-parser")
     ;
 
@@ -15,7 +16,9 @@ app.use(function(request, result, next) {
 });
 
 var routes = require("./routes/armorRoutes");
+var routes2 = require("./routes/armorTypeRoutes");
 routes(app);
+routes2(app);
 
 app.listen(port);
 
