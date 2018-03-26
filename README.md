@@ -19,7 +19,7 @@ My first react app built out as an armor calculator for MHW. The purpose of this
   - [x] Define process for source controlled DBMS (sql server database project in VS professional)
     - [ ] Document process
   - [ ] Define advanced armor tables (decorations, augments)
-  - [ ] Create insert scripts for armor sets
+  - [ ] Create insert scripts for armor sets -or- leverage existing APIs for imports (with permission)
 - [ ] Api Tier
   - [ ] Setup armors and GET
     - [x] Setup armor types and GET
