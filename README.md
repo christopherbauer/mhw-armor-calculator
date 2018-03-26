@@ -22,18 +22,24 @@ My first react app built out as an armor calculator for MHW. The purpose of this
   - [ ] Create insert scripts for armor sets
 - [ ] Api Tier
   - [ ] Setup armors and GET
-  - [ ] Setup decorations and GET
-  - [ ] Setup augmentations and GET
+    - [x] Setup armor types and GET
+    - [ ] Setup decorations and GET
+    - [ ] Setup augmentations and GET
   - [ ] Setup share link and GET (use API version in case this changes from outside world persepctive)
 
-## Technologies Used
+## Technologies/Tools Used
 
-* Node.js (Package Manager)
-* ReactJS (Web tier)
+* Package Management
+    * Node.js
+* Web tier
+    * ReactJS
     * Less-watcher
-* Sql Server Express (Data tier)
+    * NPM
+* Data Tier 
+    * Sql Server Express
     * Visual Studio (Professional Edition) - For the database project, allowing me to source control the DB
-* Node Server (Api)
+* Api
+    * Node Server
     * Sequelize
     * Tedious
 * Visual Studio Code
