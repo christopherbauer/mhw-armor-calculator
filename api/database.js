@@ -3,11 +3,17 @@
 const config = require('./config');
 
 const Sequelize = require('sequelize');
+
+console.log("Attempting to connect to instance: " + config.host);
+console.log("UserName: " + config.login);
+console.log("Password: " + config.password);
+console.log("Database: " + config.databaseName);
+
 const sequelize = new Sequelize(config.databaseName,config.login,config.password, {
     host: config.host,
     dialect: 'mssql',
     dialectOptions: {
-        port: 60641
+        port: config.port
     },
     operatorAliases: false,
     pool: {
